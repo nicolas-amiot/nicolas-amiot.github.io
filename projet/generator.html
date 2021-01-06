@@ -19,14 +19,14 @@
                     <div class="col-sm-offset-2 col-sm-8 readme">
 						<div class="callout">
 							<h1 class="h4">Générateur de fichier</h1>
-							2 générateurs de fichiers pssédant chacune leur interface sont disponibles sur mon github.<br><br>
+							2 générateurs de fichiers pssédant chacun leur interface sont disponibles sur mon github.<br><br>
 							Le <a href="https://github.com/nicolas-amiot/simple-generator" target="_blank">générateur simple</a> permet de générer autant de fois le contenu du fichier source.
 							Pour celà, il suffit de créer un fichier dans resources/models et de préciser les variables avec @{FIELD}, @{FIELD_2}, @{FIELD_3}, etc.
 							De plus il est possible d'obtenir l'index de génération avec @{INDEX} <br>
-							Une fois l'interface de lancé, vous pourrez choisir votre fichier et passé en paramètre les valeurs grâce à la zone de teste. Chaque valeur doit être séparée par une tabulation et chaque nouvelle génération par un saut de ligne.<br><br>
+							Une fois l'interface de lancée, vous pourrez choisir votre fichier et passer en paramètre les valeurs grâce à la zone de texte. Chaque valeur doit être séparée par une tabulation et chaque nouvelle génération par un saut de ligne.<br><br>
 							Le <a href="https://github.com/nicolas-amiot/generator" target="_blank">générateur complexe</a> permet quand à lui de générer un ensemble de fichiers selon des conditions à partir de balises insérées dans ces derniers.<br>
 							Il faudra préciser sur l'interface le fichier JSON contenant les différentes variables et le dossier contenant les fichiers à générer.<br>
-							Le dossier source, le dossier de destination et le caractère des balises est configurable à cet endroit resources/conf.properties.<br>
+							Le dossier source, le dossier de destination et le caractère des balises est configurable dans resources/conf.properties.<br>
 							Ci-dessous les différentes balises disponibles.
 						</div>
 						<div class="callout">
@@ -50,17 +50,17 @@
 						<div class="callout">
 							<div class="h4">Tag set</div>
 							<b>&lt;@set&gt;</b> permet d'ajouter ou modifier une variable.<br>
-							Il doit obligatoirement prendre ces 2 premiers paramètres et la 3eme est optionnel :
+							Il doit obligatoirement prendre ces 2 premiers paramètres et le 3eme est optionnel :
 							<ul>
 								<li><b>item</b> : le nom de la variable</li>
 								<li><b>value</b> : La valeur de la variable</li>
-								<li><b>scope</b> : La durée de vie de la variable, default si la durée est celle de la boucle ou global pour l'ensemble</li>
+								<li><b>scope</b> : La durée de vie de la variable : default si la durée est celle de la boucle ou global pour l'ensemble</li>
 							</ul>
 						</div>
 						<div class="callout">
 							<div class="h4">Tag for</div>
 							<b>&lt;@for&gt;</b> permet de boucler un certain nombre de fois. <b>&lt;@for:end&gt;</b> indique la fin de la boucle.<br>
-							Il doit obligatoirement prendre ces 3 premiers paramètres et la 4eme est optionnel :
+							Il doit obligatoirement prendre ces 3 premiers paramètres et le 4eme est optionnel :
 							<ul>
 								<li><b>item</b> : le nom de la variable</li>
 								<li><b>begin</b> : La valeur de la variable au début</li>
@@ -71,7 +71,7 @@
 						<div class="callout">
 							<div class="h4">Tag foreach</div>
 							<b>&lt;@foreach&gt;</b> permet de boucler sur une liste. <b>&lt;@foreach:end&gt;</b> indique la fin de la boucle.<br>
-							Il doit obligatoirement prendre ces 2 premiers paramètres :
+							Il doit obligatoirement prendre ces 2 paramètres :
 							<ul>
 								<li><b>item</b> : le nom de la variable</li>
 								<li><b>items</b> : La liste à itérer</li>
@@ -88,7 +88,7 @@
 						</div>
 						<div class="callout">
 							<div class="h4">Tag if</div>
-							<b>&lt;@if&gt;</b> permet de conditionné une partie du contenu du fichier. Le if peut être suivie du <b>&lt;@if:other&gt;</b> correspondant au sinon si ou/et du <b>&lt;@if:neither&gt;</b> correspondant au sinon.<b>&lt;@if:end&gt;</b> indique la fin de la condition<br>
+							<b>&lt;@if&gt;</b> permet de conditionner une partie du contenu du fichier. Le if peut être suivi du <b>&lt;@if:other&gt;</b> correspondant au sinon si ou/et du <b>&lt;@if:neither&gt;</b> correspondant au sinon.<b>&lt;@if:end&gt;</b> indique la fin de la condition<br>
 							Le si et sinon si doit obligatoirement prendre ce paramètre (pas de paramètre pour le sinon) :
 							<ul>
 								<li><b>test</b> : la condition à tester</li>
