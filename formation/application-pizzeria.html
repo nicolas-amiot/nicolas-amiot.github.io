@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Bienvenue à tous! Je m'appelle Nicolas Amiot et je suis développeur. Voici une de mes réalisations, l'application de pizzeria." />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/main.css" />
+        <link rel="stylesheet" href="/support/correctif.css" />
+        <title>Application de pizzeria</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+				<!-- Javascript -->
+            </header>
+            <!-- Menu vertical -->
+            <div class="col-sm-2">
+                <ul class="nav nav-sidebar">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#dta-ingenierie">DTA Ingénierie</a></li>
+                    <li><a href="#application-administration">Application d'administration</a></li>
+                    <li><a href="#application-cliente">Application cliente</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-10 realisation">
+                <!-- Contenu -->
+                <section>
+                    <div class="row">
+                        <h1 class="text-center h2">Application de pizzeria</h1>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="introduction">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Introduction</h2>
+                                    <p>
+                                        J'ai réalisé ce projet en 8 jours avec 10 autres personnes chez DTA Ingénierie à Nantes.
+                                        Le projet se divisait en 2 applications et était effectué selon la méthodologie Scrum avec un sprint de 4 jours sur chaque application.
+                                        Le projet était aussi réalisé sous Maven avec chacune des applications qui partageait le même modèle.
+                                        La première était l'application d'administration qui devait permettre la gestion de la pizzeria.
+                                        La deuxième, quant à elle, était l'application cliente permettant de commander à la pizzeria.
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li><div class="glyphicon glyphicon-calendar"></div><span data-article="04/05/2017"></span></li>
+                                        <li>|</li>
+                                        <li><div class="glyphicon glyphicon-globe"></div> <a href="http://www.dta-ingenierie.fr" target="_blank">http://www.dta-ingenierie.fr</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="dta-ingenierie">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">DTA Ingénierie</h2>
+                                    <p>
+                                        DTA Ingénierie est une société qui veut créer une rupture entre les jeunes diplomés en informatique et les ESN recherchant des profils expérimentés.
+                                        Pour celà, DTA Ingénierie forme pendant 3 mois les diplomés sur la technique mais aussi sur l'intégration humaine au sein d'une entreprise.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="application-administration">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Application d'administration</h2>
+                                    <p>
+                                        Cette application était réalisée en Java EE et utilisait les EJB.
+                                        L'application comprenait une page de d'authentification permettant d'accéder au reste de l'application.
+                                        Dans cette page, un lien "mot de passe oublié" était disponible pour envoyer, par mail à l'utilisateur, un nouveau mot de passe.
+                                        Une fois connecté, l'utilisateur pouvait accéder à la gestion des ingrédients, stocks, pizzas, boissons, desserts, menus, clients, livreurs, commandes, promotions, statistiques et des autres utilisateurs.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="application-cliente">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Application cliente</h2>
+                                    <p>
+                                        Cette application était réalisée en Java EE avec le framework Spring et AngularJS.
+                                        La page d'accueil du site web affiche les 3 nouvelles pizzas que propose la pizzeria.
+                                        Une autre page permet de consulter toutes les pizzas avec les ingrédients et les prix associés.
+                                        Pour pouvoir commander, l'utilisateur doit s'inscrire s'il ne possède pas de compte puis s'authentifier depuis ce site.
+                                        Le client peut à tout moment reprendre sa commande et la modifier tant qu'il ne l'a pas validée.
+                                        Une fois la commande validée, le client peut suivre sa commande afin de savoir, par exemple, si sa commande est en préparation, en cours de livraison, prête à être cherchée...
+                                        De plus, le client peut accéder à son compte afin de changer ses informations personnelles comme l'adresse de livraison.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="galerie">
+                            <div class="gallery-title">
+                                <h2 class="h4">Galerie</h2>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default glyphicon glyphicon glyphicon-cog dropdown-toggle" data-toggle="dropdown"></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="" id="galerie_standard">Mode standard</a></li>
+                                        <li><a href="" id="galerie_vitrine">Mode vitrine</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gallery">
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/pom.png" alt="POM Maven" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/entity.png" alt="Entités" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/ejb.png" alt="EJB" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/servlet.png" alt="Servlet" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/jsp.png" alt="JSP" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/filter.png" alt="Filtre" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/listener.png" alt="Ecouteur" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/rest.png" alt="REST" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/controller.png" alt="Contrôleur" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/pizzeria/view.png" alt="Vue" />
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <footer>
+						<!-- Javascript -->
+                    </footer>
+                </section>
+            </div>
+        </div>
+        <!-- Lightbox -->
+        <div id="lightbox" class="modal fade">
+            <div class="modal-dialog">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/jquery/external/jquery/jquery.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>

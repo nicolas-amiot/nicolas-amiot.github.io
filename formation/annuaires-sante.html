@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Bienvenue à tous! Je m'appelle Nicolas Amiot et je suis développeur. Voici une de mes réalisations, la synchronisation d'annuaires." />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/main.css" />
+        <link rel="stylesheet" href="/support/correctif.css" />
+        <title>Annuaires de santé</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+				<!-- Javascript -->
+            </header>
+            <!-- Menu vertical -->
+            <div class="col-sm-2">
+                <ul class="nav nav-sidebar">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#gcs-emosist">GCS EMOSIST</a></li>
+                    <li><a href="#pages-sante">Pages Santé</a></li>
+                    <li><a href="#ror-paca">ROR PACA</a></li>
+                    <li><a href="#etl-talend">ETL Talend</a></li>
+                    <li><a href="#conception">Conception</a></li>
+                    <li><a href="#realisation">Réalisation</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-10 realisation">
+                <!-- Contenu -->
+                <section>
+                    <div class="row">
+                        <h1 class="text-center h2">Annuaires de santé</h1>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="introduction">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Introduction</h2>
+                                    <p>
+                                        J'ai réalisé un stage de 14 semaines au GCS EMOSIST à Besançon.
+                                        J'étais en charge de synchroniser les deux bases de données des annuaires de santé de façon bidirectionnelle.
+                                        Le GCS possédait son propre annuaire de professionnels de santé nommé Pages Santé.
+                                        Mais le ministère de la Santé publia un nouveau décret obligeant toutes les régions depuis leur fusion à se procurer un répertoire opérationnel des ressources (ROR) et de l'alimenter.
+                                        EMOSIST possédant Pages Santé, il voulait alimenter une partie du ROR depuis celui-ci pour éviter l'alimentation "à la main".
+                                        Il souhaitait aussi conservait Pages Santé en plus du ROR puisqu'ils ont entièrement la main sur cette application contrairement au ROR qui appartient à l'observatoire régional des urgences PACA.
+                                        Il ne s'agissait alors plus d'une simple alimentation, mais d'une vraie synchronisation bidirectionnelle entre deux bases de données différentes.
+                                        Pour effectuer un tel projet, j'ai utilisé l'ETL Talend.
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li><div class="glyphicon glyphicon-calendar"></div><span data-article="10/06/2016"></span></li>
+                                        <li>|</li>
+                                        <li><div class="glyphicon glyphicon-globe"></div> <a href="http://www.emosist.fr" target="_blank">http://www.emosist.fr</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="gcs-emosist">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">GCS EMOSIST</h2>
+                                    <p>
+                                        Le GCS EMOSIST, Ensemble pour la Modernisation des Systèmes d'Information de Santé et le développement de la Télémédecine est un Groupement de Coopération Sanitaire.
+                                        Le GCS se présente comme un instrument de coopération entre les établissements publics et privés de santé autorisés par l’Agence Régionale de Santé (ARS) et qui a pour finalité de faciliter, améliorer ou développer l’activité de ses membres.
+                                        Il poursuit un but non-lucratif et permet de mutualiser des moyens de toute nature, que ce soit des moyens humains, immobiliers, fonciers, d'équipements ou encore des systèmes d’informations.
+                                        Le GCS EMOSIST, créé en 2004, est spécialisé dans le domaine de la e-santé.
+                                        La e-santé ou encore télésanté se définit comme les services du numérique au service du bien-être du patient.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="pages-sante">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Pages Santé</h2>
+                                    <p>
+                                        Le projet de mise en place d'un annuaire régional des professionnels de santé a vu le jour en 2008.
+                                        Il a pour but de répertorier l’ensemble des acteurs, des entités juridiques et des activités de santé en Franche-Comté.
+                                        Pages Santé rassemble les données de descriptions et de contacts des établissements de santé, des médecins libéraux, des réseaux de santé et de tout autre acteur du secteur sanitaire, médico-social et ambulatoire.
+                                        Cet annuaire est accessible aux patients, au grand public, aux médecins libéraux et aux établissements selon leurs profils et leurs droits.
+                                        Pages Santé se compose d'une base de données qui est accessible via des web services et une interface web.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="ror-paca">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">ROR PACA</h2>
+                                    <p>
+                                        Le Répertoire Opérationnel des Ressources est un outil informatique répondant aux critères réglementaires et aux recommandations nationales, qui décrit l'aspect opérationnel de chaque établissement de la région.
+                                        Il existe un total de 3 ROR et ils sont interopérables et peuvent donc discuter entre eux.
+                                        Ce qui permet lors d'une recherche d'offre de soins spécifiques, de pouvoir définir un rayon géographique dépassant la simple recherche régionale.
+                                        De plus, le ROR permet aussi d'accéder au détail de l'offre de soins des établissements de santé comme le nombre de lits disponibles, le plateau technique ou encore la permanence de soin.
+                                        Le ROR PACA, tout comme Pages Santé, se compose d'une base de données qui est accessible via des web services et une interface web.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="etl-talend">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">ETL Talend</h2>
+                                    <p>
+                                        Un ETL (Extract-Transform-Load) est une technologie informatique intergiciel permettant d'effectuer des synchronisations massives d'informations d'une banque de données, pouvant être composée de sources différentes, vers une autre.
+                                        Pour effectuer la synchronisation, l'ETL va d'abord effectuer une extraction, c'est-à-dire accéder aux systèmes de stockage de données (SGBD, fichiers...) afin de récupérer les données identifiées et sélectionnées en tenant compte de la périodicité des rafraîchissements.
+                                        Une fois l'extraction terminée, la prochaine étape consiste à la transformation de ces données. En effet, toutes les données ne sont pas utilisables telles quelles. Elles méritent d'être vérifiées, reformatées, nettoyées afin d'éliminer les valeurs aberrantes et les doublons.
+                                        La dernière étape du processus est le chargement des données afin d'insérer les données dans la destination voulue.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="conception">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Conception</h2>
+                                    <p>
+                                        Une grande partie de mon travail s'est consacrée à la phase de conception puisque la base de données PostgreSQL de Pages Santé comportait 133 tables et celle du ROR sous MySQL de 349 tables.
+                                        Parmi toutes ces tables, je devais retrouver les informations présentes dans les deux bases de données afin de pouvoir les synchroniser lors de la phase de réalisation.
+                                        Je devais aussi trouver les champs permettant l'identification de l'entité juridique et de ces sous-entités. Ces identifiants permettront de savoir si l'entité doit être ajoutée ou mise à jour.
+                                        De plus, je devais repérer les dates de mise à jour présentes dans différentes tables qui sont associées à l'entité actuelle afin de savoir quelle base de données est à mettre à jour.
+                                        Un diagramme d'activité à été réalisé par moi-même pour expliquer le fonctionnement de cette synchronisation.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="realisation">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Réalisation</h2>
+                                    <p>
+                                        Je vais rapidement vous énumérer les fonctionnalités du travail réalisé en Java avec l'ETL ci-dessous :
+                                        <ul>
+                                            <li>Envoi un mail à l'utilisateur avec en pièce jointe un fichier de log par type d'entité, précisant si pour chaque entité la synchronisation s'est bien passé et dans le cas contraire la raison de cet échec.</li>
+                                            <li>Ajout de l'entité si elle n'existe pas dans l'autre base de données.</li>
+                                            <li>Minimisation des pertes de données lorsqu'on n'arrive pas à exclure une potentielle erreur de saisie sur un identifiant en regardant les autres entités rattachées à la nôtre.</li>
+                                            <li>Mise à jour de l'entité dans la base de données contenant les informations les plus anciennes si on est sur que les entités soient les mêmes.</li>
+                                            <li>Paramétrage du nombre d'entités devant être traité avant de commettre les bases de données pour éviter d'alourdir la base de données avec une validation automatique pour chaque entité.</li>
+                                            <li>Restauration de la base de données sur la dernière validation si une erreur à eu lieu pendant l'exécution d'une requête SQL.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <footer>
+						<!-- Javascript -->
+                    </footer>
+                </section>
+            </div>
+        </div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/jquery/external/jquery/jquery.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>

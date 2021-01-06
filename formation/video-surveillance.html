@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Bienvenue à tous! Je m'appelle Nicolas Amiot et je suis développeur. Voici une de mes réalisations, la vidéo-surveillance." />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/main.css" />
+        <link rel="stylesheet" href="/support/correctif.css" />
+        <title>Vidéo-surveillance</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+				<!-- Javascript -->
+            </header>
+            <!-- Menu vertical -->
+            <div class="col-sm-2">
+                <ul class="nav nav-sidebar">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#hebus-ip">HEBUS-IP</a></li>
+                    <li><a href="#materiel">Matériel</a></li>
+                    <li><a href="#configuration">Configuration</a></li>
+                    <li><a href="#script-shell">Script shell</a></li>
+                    <li><a href="#site-web">Site web PHP</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-10 realisation">
+                <!-- Contenu -->
+                <section>
+                    <div class="row">
+                        <h1 class="text-center h2">Vidéo-surveillance</h1>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="introduction">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Introduction</h2>
+                                    <p>
+                                        J'ai réalisé un stage de 6 semaines chez HEBUS-IP à Evreux.
+                                        J'étais en charge de mettre en œuvre, à partir de Raspberry Pi, un système de vidéo-surveillance avec consommation du flux à distance.
+                                        Une partie de mon travail était alors consacrée sur la configuration de ce nano-ordinateur.
+                                        La deuxième partie consistait à la réalisation de scripts shell afin de rendre le système entièrement autonome et à la création d'un site web hébergé par l'une des Raspberry afin de pouvoir consulter les flux vidéos.
+                                        La dernière partie de mon travail était la création d'un manuel d'utilisation.
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li><div class="glyphicon glyphicon-calendar"></div><span data-article="27/06/2014"></span></li>
+                                        <li>|</li>
+                                        <li><div class="glyphicon glyphicon-globe"></div> <a href="http://www.hebus.info" target="_blank">http://www.hebus.info</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="hebus-ip">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">HEBUS-IP</h2>
+                                    <p>
+                                        HEBUS-IP est une SARL créée en 2004 et spécialisé dans le service informatique réseaux et télécom.
+                                        La société prend en charge l'intégralité de la mise en place du réseau des entreprises.
+                                        Elle fournit aussi des services sur la téléphonie des entreprises, en plus des prestations informatiques et d'infogérances.
+                                        Pour finir, elle propose de développer les différentes applications de leurs clients.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="materiel">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Matériel</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Ordinateur Windows</li>
+                                            <li>Raspberry Pi.</li>
+                                            <li>Pi camera.</li>
+                                            <li>Carte SD 8 Go minimum avec Raspbian comme système d'exploitation.</li>
+                                            <li>Câble Ethernet.</li>
+                                            <li>Câble micro-USB vers USB pour l'alimentation.</li>
+                                            <li>Clavier USB.</li>
+                                            <li>Écran avec entrée DVI.</li>
+                                            <li>Câble HDMI-DVI.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="configuration">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Configuration</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Installation de Notepad++ sur Windows pour le développement</li>
+                                            <li>Installation et configuration de Putty sur Windows pour la connexion à distance en ssh.</li>
+                                            <li>Installation et configuration de WinSCP sur Windows pour le transfert de fichier en sftp.</li>
+                                            <li>Installation d'Apache et PHP5 sur Rasbian pour le site web.</li>
+                                            <li>Installation de VLC sur Rasbian pour le coupler à la commande raspivid afin de canaliser la sortie du flux vidéo.</li>
+                                            <li>Installation de MPlayer sur Rasbian pour enregistrer un flux vidéo.</li>
+                                            <li>Configuration de Cron sur Rasbian (table de planification) pour exécuter l'enregistrement d'un nouveau fichier vidéo toutes les heures.</li>
+                                            <li>Installation et configuration de Samba sur Rasbian pour permettre l'accès au dossier partagé du Windows contenant les vidéos enregistrées.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="script-shell">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Script shell</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Script pour lancer le flux vidéo et le canaliser.</li>
+                                            <li>Script pour enregistrer le flux vidéo dans le dossier partagé tout en créant les sous-répertoires journaliers nécessaires.</li>
+                                            <li>Script pour lire un fichier vidéo enregistré selon la date donnée.</li>
+                                            <li>Script qui supprime les fichiers vidéos les plus anciens si jamais l'espace disque ne permet plus l'enregistrement d'une vidéo d'une heure.</li>
+                                            <li>Script permettant l'installation des différents composants rendant directement la Raspberry fonctionnelle pour le système de vidéo-surveillance.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="site-web">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Site web PHP</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Lire plusieurs flux vidéo en temps réel.</li>
+                                            <li>Choisir le nombre d'objets VLC que l'on veut afficher sur une ligne pour le flux en temps réel.</li>
+                                            <li>Choisir parmi les ip enregistrée lesquelles seront utilisées pour les flux vidéos en temps réels.</li>
+                                            <li>Choisir l'ip pour laquelle on veux lire une vidéo déjà enregistrée au lieu de lire le flux.</li>
+                                            <li>Calendrier et horloge pour remplir plus rapidement les champs destinés à connaître la vidéo voulue.</li>
+                                            <li>Possibilité d'ajouter une nouvelle ip.</li>
+                                            <li>Possibilité de supprimer une ip déjà enregistrée.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <footer>
+						<!-- Javascript -->
+                    </footer>
+                </section>
+            </div>
+        </div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/jquery/external/jquery/jquery.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>

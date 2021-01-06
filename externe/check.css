@@ -1,0 +1,123 @@
+/* Hide the browser's default checkbox and radio */
+.checkable input, .switch input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Focus on the checkmark / slider */
+.checkable input:focus ~ .checkmark, .switch input:focus ~ .slider {
+	box-shadow: 0 0 1px 1px #2196F3;
+}
+
+/* The checkbox and radio */
+.checkable {
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+/* Create a custom checkbox and radio */
+.checkable input ~ .checkmark {
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	background-color: #fff;
+	border-color: #337ab7;
+	border-style: solid;
+	border-width: 2px;
+}
+
+/* Round border for the custom radio */
+.checkable input[type="radio"] ~ .checkmark {
+	border-radius: 50%;
+}
+
+/* Create the indicator for checked checkbox */
+.checkable input[type="checkbox"]:checked ~ .checkmark:after {
+	content: "";
+	position: absolute;
+	left: 4px;
+	top: 1px;
+	width: 5px;
+	height: 10px;
+	border-style: solid;
+	border-color: #337ab7;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+/* Create the indicator for indeterminated checkbox */
+.checkable input[type="checkbox"]:indeterminate ~ .checkmark:after {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 6px;
+	width: 10px;
+	height: 2px;
+	background: #337ab7;
+}
+
+/* Create the indicator for checked radio */
+.checkable input[type="radio"]:checked ~ .checkmark:after {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #337ab7;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	padding-left: 57px;
+	cursor: pointer;
+}
+
+/* The slider */
+.switch .slider {
+	position: absolute;
+	width: 50px;
+	height: 24px;
+	top: -2px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 34px;
+}
+
+/* Button slider */
+.switch .slider:before {
+	position: absolute;
+	content: "";
+	height: 16px;
+	width: 16px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+
+/* Activate color */
+.switch input:checked ~ .slider {
+	background-color: #337ab7;
+}
+
+/* Slider animation */
+.switch input:checked ~ .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}

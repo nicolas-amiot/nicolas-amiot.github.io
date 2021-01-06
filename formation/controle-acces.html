@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Bienvenue à tous! Je m'appelle Nicolas Amiot et je suis développeur. Voici une de mes réalisations, le contrôle d'accès." />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/main.css" />
+        <link rel="stylesheet" href="/support/correctif.css" />
+        <title>Contrôle d'accès</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+				<!-- Javascript -->
+            </header>
+            <!-- Menu vertical -->
+            <div class="col-sm-2">
+                <ul class="nav nav-sidebar">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#bdd">Base de données</a></li>
+                    <li><a href="#service-personnel">Service du personnel</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-10 realisation">
+                <!-- Contenu -->
+                <section>
+                    <div class="row">
+                        <h1 class="text-center h2">Contrôle d'accès</h1>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="introduction">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Introduction</h2>
+                                    <p>
+                                        Projet de fin d'année de licence professionnel réalisé en groupe de 3 et selon la méthodologie de travail du cycle en V.
+                                        Le but du projet était de pouvoir surveiller les passages effectués au sein d'une entreprise.
+                                        Les employés ou visiteurs doivent présenter leurs badges devant un lecteur pour rentrer dans une salle.
+                                        L'accès à une salle diffère selon les droits des personnes et les horaires.
+                                        Certaines salles sont dites sensibles et un mot de passe sera demandé lors du passage d'un badge en plus de la vidéo-surveillance effectuée dans ces salles.
+                                        J'étais en charge de la base de données ainsi que de l'application de service du personnel permettant la gestion des badges, l'agencement des bâtiments de l'entreprise ainsi que la visualisation de l'historique des passages.
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li><div class="glyphicon glyphicon-calendar"></div><span data-article="04/03/2016"></span></li>
+                                        <li>|</li>
+                                        <li><div class="glyphicon glyphicon-globe"></div> <a href="http://www.univ-fcomte.fr" target="_blank">http://www.univ-fcomte.fr</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="bdd">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Base de données</h2>
+                                    <p>
+                                        Le système de gestion de base de données choisi pour ce projet était MySQL.
+                                        Mon rôle d'administrateur de base de données consistait à :
+                                        <ul>
+                                            <li>Ajouter un utilisateur avec des droits restreints à la base de données (aucun droit d'administration).</li>
+                                            <li>Créer les différentes tables nécessaires au fonctionnement du projet en se préoccupant des clés primaires, clés étrangères, champs uniques, etc.</li>
+                                            <li>Choisir le moteur de stockage et l'interclassement le plus approprié aux applications.</li>
+                                            <li>Réaliser les différentes requêtes pour accéder, ajouter, modifier ou supprimer les données souhaitées.</li>
+                                            <li>Coder la classe permettant à l'application l'accès à la base de données en installant au préalable de driver nécessaire.</li>
+                                            <li>Effectuer des tests de validation.</li>
+                                            <li>S'assurer que la mise en commun des différentes applications avec la base de données s'effectue facilement et sans aucun souci.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="service-personnel">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h2 class="media-heading h4">Service du personnel</h2>
+                                    <p>
+                                        L'application est faîte avec Java SE et selon l'architecture 3-tiers.
+                                        Dans un premier temps, cette application permet de lire un badge et selon que le badge soit déjà enregistré ou non dans la base de données de pouvoir, ajouter, modifier ou supprimer les informations concernant ce badge.
+                                        Ces informations concernent entre autres le propriétaire du badge, de son mot de passe crypté en MD5 pour les zones sensibles et les salles dont il a accès.
+                                        La deuxième partie de l'application est consacrée à l'agencement des bâtiments de l'entreprise.
+                                        On peut ajouter, modifier et supprimer les informations concernant les bâtiments, les salles ou les lecteurs.
+                                        Pour finir, l'application permet aussi la visualisation de l'historique des passages.
+                                        On peut accéder à l'historique des passages à une zone spécifique ainsi qu'aux passages effectués par une personne en scannant ou indiquant son badge.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="well" id="galerie">
+                            <div class="gallery-title">
+                                <h2 class="h4">Galerie</h2>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default glyphicon glyphicon glyphicon-cog dropdown-toggle" data-toggle="dropdown"></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="" id="galerie_standard">Mode standard</a></li>
+                                        <li><a href="" id="galerie_vitrine">Mode vitrine</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gallery">
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/cas-utilisation.png" alt="Cas d'utilisation" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/sequence.png" alt="Séquence" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/deploiement.png" alt="Déploiement" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/synoptique.png" alt="Synoptique" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/entites.png" alt="Entités" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/mld.png" alt="MLD" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/droits-acces.png" alt="Droits d'accès" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/ajout-badge.png" alt="Ajout de badge" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/agencement-lecteur.png" alt="Agencement" />
+                                    </a>
+                                </div>
+                                <div class="col-tn-12 col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                                    <a href="" data-toggle="modal" data-target="#lightbox">
+                                        <img src="/images/formation/controle/historique-zone.png" alt="Historique" />
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <footer>
+						<!-- Javascript -->
+                    </footer>
+                </section>
+            </div>
+        </div>
+        <!-- Lightbox -->
+        <div id="lightbox" class="modal fade">
+            <div class="modal-dialog">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/jquery/external/jquery/jquery.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>

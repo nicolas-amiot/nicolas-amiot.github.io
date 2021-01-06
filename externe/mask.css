@@ -1,0 +1,22 @@
+input[data-mask] {
+	letter-spacing: 2px;
+	font-family: Monospace;
+	font-size: 15px;
+}
+
+.placeholders {
+    position: relative;
+	white-space: pre;
+	font-family: Monospace;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+
+.placeholders::after {
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    content: attr(data-placeholders);
+    pointer-events: none;
+	opacity: 0.5;
+}
