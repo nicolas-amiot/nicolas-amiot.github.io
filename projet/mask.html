@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Bienvenue à tous! Je m'appelle Nicolas Amiot et je suis développeur. Voici mes différentes créations." />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/main.css" />
+        <link rel="stylesheet" href="/support/correctif.css" />
+		<link rel="stylesheet" href="/externe/mask.css" />
+        <title>Mask</title>
+    </head>
+    <body class="light-background">
+        <div class="container-fluid">
+            <header>
+				<!-- Javascript -->
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-8 readme">
+						<div class="callout">
+							<h1 class="h4">Mask</h1>
+							Cette fonction permet d'ajouter un masque à un champ de saisie.<br><br>
+							Le masque peut être configuré depuis 3 attributs data :<br>
+							<li>Le data-mask précise le masque dont les étoiles sont les caractères saisissables et les autres les caractères fixes.</li>
+							<li>Le data-format permet d'autoriser ou non certains caractères. Il y a 3 formats possibles : numeric, alphabetic et alphanumeric (par défaut alphanumeric).</li>
+							<li>Le data-placeholder permet de changer le placeholder par défaut, l'underscore, pour les caractères saisissables.</li>
+						</div>
+						<div class="code">
+							<div class="h5">mask.js <a href="/externe/mask.js" title="downoald" target="_blank"><span class="glyphicon glyphicon-download-alt"></span></a></div>
+							<code>
+								<iframe src="/externe/mask.js" ></iframe>
+							</code>
+						</div>
+						<div class="code">
+							<div class="h5">mask.css <a href="/externe/mask.css" title="downoald" target="_blank"><span class="glyphicon glyphicon-download-alt"></span></a></div>
+							<code class="code">
+								<iframe src="/externe/mask.css" ></iframe>
+							</code>
+						</div>
+						<div class="code">
+							<div class="h5">index.html <a href="#code" title="play"><span class="glyphicon glyphicon-play-circle"></span></a></div>
+							<code>
+								<div contenteditable="true">
+									<pre>&lt;input type="text" data-mask="**/**/20**" data-format="numeric" /&gt;</pre>
+									<br>
+									<pre>&lt;script&gt;</pre>
+									<pre>    $("input[data-mask]").each(function(){</pre>
+									<pre>        $(this).mask();</pre>
+									<pre>    });</pre>
+									<pre>&lt;/script&gt;</pre>
+								</div>
+							</code>
+						</div>
+						<div class="callout">
+							<div class="h4">Résultat</div>
+							<div id="code">
+								<input type="text" data-mask="**/**/20**" data-format="numeric" />
+							</div>
+						</div>
+					</div>
+				</div>
+            </section>
+            <footer>
+				<!-- Javascript -->
+            </footer>
+        </div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/jquery/external/jquery/jquery.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+		<script src="/externe/mask.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("input[data-mask]").each(function(){
+					$(this).mask();
+				});
+			});
+		</script>
+    </body>
+</html>

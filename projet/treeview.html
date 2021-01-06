@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Bienvenue à tous! Je m'appelle Nicolas Amiot et je suis développeur. Voici mes différentes créations." />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/main.css" />
+        <link rel="stylesheet" href="/support/correctif.css" />
+		<link rel="stylesheet" href="/externe/treeview.css" />
+        <title>Treeview</title>
+    </head>
+    <body class="light-background">
+        <div class="container-fluid">
+            <header>
+				<!-- Javascript -->
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-8 readme">
+						<div class="callout">
+							<h1 class="h4">TreeView</h1>
+							Cette fonction permet de construire un TreeView à partir d'une liste.<br><br>
+							Le treeview peut être configuré à partir de 3 paramètres :<br>
+							<li>La valeur name permet de spécifier le nom des input du formulaire (par défaut treeview)</li>
+							<li>Si présicer le type permet de transformer les élements du plus bas niveau en checkbox, radio ou link. Sinon ce sera du simple texte.</li>
+							<li>Si la valeur childNumber est à true, le nombre d'élément enfant sera affiché à l'élément parent.</li>
+						</div>
+						<div class="code">
+							<div class="h5">treeview.js <a href="/externe/treeview.js" title="downoald" target="_blank"><span class="glyphicon glyphicon-download-alt"></span></a></div>
+							<code>
+								<iframe src="/externe/treeview.js" ></iframe>
+							</code>
+						</div>
+						<div class="code">
+							<div class="h5">treeview.css <a href="/externe/treeview.css" title="downoald" target="_blank"><span class="glyphicon glyphicon-download-alt"></span></a></div>
+							<code class="code">
+								<iframe src="/externe/treeview.css" ></iframe>
+							</code>
+						</div>
+						<div class="code">
+							<div class="h5">index.html <a href="#code" title="play"><span class="glyphicon glyphicon-play-circle"></span></a></div>
+							<code>
+								<div contenteditable="true">
+									<pre>&lt;ul class="treeview"&gt;</pre>
+									<pre>    &lt;li&gt;Racine&lt;ul&gt;</pre>
+									<pre>        &lt;li&gt;Fruits&lt;ul&gt;</pre>
+									<pre>            &lt;li&gt;Pomme&lt;/li&gt;</pre>
+									<pre>            &lt;li&gt;Banane&lt;/li&gt;</pre>
+									<pre>            &lt;li&gt;Orange&lt;/li&gt;</pre>
+									<pre>        &lt;/ul&gt;&lt;/li&gt;</pre>
+									<pre>        &lt;li&gt;Légumes&lt;ul&gt;</pre>
+									<pre>            &lt;li&gt;Carotte&lt;/li&gt;</pre>
+									<pre>            &lt;li&gt;Concombre&lt;/li&gt;</pre>
+									<pre>            &lt;li&gt;Poireau&lt;/li&gt;</pre>
+									<pre>        &lt;/ul&gt;&lt;/li&gt;</pre>
+									<pre>        &lt;li&gt;Épices&lt;ul&gt;</pre>
+									<pre>            &lt;li&gt;Curcuma&lt;/li&gt;</pre>
+									<pre>            &lt;li&gt;Gingembre&lt;/li&gt;</pre>
+									<pre>            &lt;li&gt;Poivre&lt;/li&gt;</pre>
+									<pre>        &lt;/ul&gt;&lt;/li&gt;</pre>
+									<pre>    &lt;/ul&gt;&lt;/li&gt;</pre>
+									<pre>&lt;/ul&gt;</pre>
+									<br>
+									<pre>&lt;script&gt;</pre>
+									<pre>    $(".treeview").each(function(){</pre>
+									<pre>        $(this).treeview({</pre>
+									<pre>            "name": "myTreeView",</pre>
+									<pre>            "type": "checkbox",</pre>
+									<pre>            "childNumber": true</pre>
+									<pre>        });</pre>
+									<pre>    });</pre>
+									<pre>&lt;/script&gt;</pre>
+								</div>
+							</code>
+						</div>
+						<div class="callout">
+							<div class="h4">Résultat</div>
+							<div id="code">
+								<ul class="treeview">
+									<li>Racine<ul>
+										<li>Fruits<ul>
+											<li>Pomme</li>
+											<li>Banane</li>
+											<li>Orange</li>
+										</ul></li>
+										<li>Légumes<ul>
+											<li>Carotte</li>
+											<li>Concombre</li>
+											<li>Poireau</li>
+										</ul></li>
+										<li>Épices<ul>
+											<li>Curcuma</li>
+											<li>Gingembre</li>
+											<li>Poivre</li>
+										</ul></li>
+									</ul></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+            </section>
+            <footer>
+				<!-- Javascript -->
+            </footer>
+        </div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/jquery/external/jquery/jquery.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+		<script src="/externe/treeview.js"></script>
+		<script>
+			$(".treeview").each(function(){
+				$(this).treeview({
+					"name": "myTreeView",
+					"type": "checkbox",
+					"childNumber": true
+				});
+			});
+		</script>
+    </body>
+</html>

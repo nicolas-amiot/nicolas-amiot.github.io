@@ -1,0 +1,1043 @@
+/*** FONT ***/
+
+/* Font Arial */
+@font-face {
+    font-family: 'Arial'; /* a name to be used later */
+    src: url('fonts/arial.ttf'); /* URL to font */
+}
+
+/* Font Verdana */
+@font-face {
+    font-family: 'Verdana'; /* a name to be used later */
+    src: url('fonts/verdana.ttf'); /* URL to font */
+}
+
+/* Font Comic */
+@font-face {
+    font-family: 'Comic';
+    src: url('fonts/comic.ttf');
+}
+
+/*** ELEMENT HTML ***/
+
+/* Prend au moins tout l'ecran pour positionner le footer */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Decale le body pour le menu fixe et le footer */
+body {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* Empeche les images d'etre selectionnee */
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+/* Desactive la bordure de l'iframe et occupe toute la largeur disponible */
+iframe {
+	border: 0;
+	width: 100%;
+}
+
+/* Supprime la surbrillance d'une div editable et ajoute un espacement */
+div[contenteditable] {
+	outline: none;
+	padding: 6px 8px;
+}
+
+/* Supprime le style bootstrap des elements pre */
+pre {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+}
+
+/*** Ajout du glyphicon demi etoile par css ***/
+.glyphicon-star-half:before {
+
+      content: "\e006"; /* code for glyphicon-star */
+      width: 47%;
+      position: absolute;
+      overflow: hidden;
+
+}
+.glyphicon-star-half:after {
+    content: "\e007"; /* code for glyphicon-star-empty */
+}
+
+/*** MENU ***/
+
+/* Titre */
+.navbar .navbar-header a {
+    font-family: 'Comic', sans-serif;
+}
+
+/* Menu et sous-menu */
+.navbar,
+.navbar .nav > li.dropdown .dropdown-menu {
+    background-color: #1a1a1a;
+}
+
+/* Sous-menu */
+.navbar .nav > li.dropdown .dropdown-toggle,
+.navbar .nav > li.dropdown .dropdown-menu > li a {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Fleche lors de l'ouverture du sous-menu */
+.navbar .nav > li.dropdown.open .caret,
+.navbar .nav > li.dropdown .caret.select {
+    color: #5472AE;
+}
+
+/* Liens du menu */
+.navbar .nav > li a,
+.navbar .nav > li a:focus,
+.navbar .navbar-header a,
+.navbar .navbar-header a:focus {
+    color: #ffffff;
+}
+
+/* Survol sur un element non selectionne */
+.navbar .nav > li:not(.select) a:hover,
+.navbar .nav > li.dropdown .dropdown-menu > li:not(.select) a:hover {
+    color: #5472AE;
+    outline: none;
+}
+
+/* Survol sur le titre et menu selectionne */
+.navbar .navbar-header a:hover,
+.navbar .nav > li.select a:hover,
+.navbar .nav > li.dropdown .dropdown-menu > li.select a:hover {
+    color: #ffffff;
+    outline: none;
+}
+
+/* Menu reduit */
+.navbar .navbar-header .navbar-toggle {
+    background-color: #1a1a1a;
+    border-color: #ffffff;
+}
+
+/* Barres du menu reduit */
+.navbar .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+/* Element principal selectionne' */
+.navbar .nav > li.select {
+    background-color: #1a1a1a;
+    border-bottom: 2px #5472AE solid;
+}
+
+/* Element principal non selectionne' */
+.navbar .nav > li:not(.select) {
+    border-bottom: 2px #1a1a1a solid;
+}
+
+/* Element du sous-menu selectionne */
+.navbar .nav > li.dropdown .dropdown-menu > li.select a {
+    background-color: #5472AE;
+}
+
+@media (max-width: 767px) {
+    /* Element principal selectionne */
+    .navbar .nav > li.select {
+        background-color: #5472AE;
+        border-bottom: none;
+    }
+}
+
+/*** PIED DE PAGE ***/
+
+/* Positionne le footer en bas */
+.footer {
+    width: 100%;
+    min-height: 20px;
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Decale le footer pour les pages concernant les realisations' */
+.realisation .footer{
+    bottom: -20px;
+}
+
+/*** CENTRAGE VERTICAL ***/
+
+/* Centrer verticalement en prennant compte de la marge sur le body */
+.vertical-center{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    padding-top: 25px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+@media (max-width: 767px){
+    /* Affichage d'un texte long pour les grands ecrans */
+    .long-text{
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px){
+    /* Affichage d'un texte court pour les petits ecrans */
+    .short-text{
+        display: none !important;
+    }
+}
+
+/*** MODAL/LIGHTBOX ***/
+
+/* Centre le modal dans la page */
+.modal {
+    text-align: center;
+}
+
+/* Centrage vertical du modal */
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Centrage vertical de la boite */
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Couleur du texte */
+.modal-message{
+    color: #555;
+}
+
+/* Pour eviter que le modal rentre en colision avec la fenetre empechant le centrage vertical */
+.modal-message .modal-dialog{
+    max-width: 90%;
+}
+
+/* Retrait de la bordure pour l'en-tete du modal */
+.modal-message .modal-header {
+    border-bottom: none;
+}
+
+/* Retrait de la bordure pour le pied de page du modal */
+.modal-message .modal-footer {
+    border-top: none;
+}
+
+/* Pas de contour pour les images devant s'afficher dans la lightbox */
+a[data-target="#lightbox"] {
+    outline: none;
+}
+
+/* Bouton fermer de la lightbox */
+.modal .close {
+    opacity: 1;
+    color: #fff;
+    background-color: #222;
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    position: absolute;
+    top: -15px;
+    float: right;
+    right: -10px;
+    z-index: 1;
+    outline: none;
+}
+
+/*** CARROUSEL ***/
+
+/* Redefini le carousel-control pour enlever l'opacite sur le focus */
+.carousel-control:focus{
+    opacity: .5;
+}
+
+/* Opacite lors du survol sur les fleches de navigation */
+.carousel-control:hover{
+    opacity: .9;
+}
+
+/* Centrer l'image quand la div est trop grande (zoom bas) */
+.item img{
+    margin: 0 auto;
+}
+
+/*** VERTICAL CAROUSEL ***/
+
+/* Centre les chevrons de navigation */
+.vertical-carousel > .chevron{
+    text-align: center;
+}
+
+/* Defini les proprietes de ces chevrons de navigation */
+.vertical-carousel > .chevron span[data-slide]{
+    font-size: 50px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Defini les proprietes du chevron desactive */
+.vertical-carousel > .chevron span[data-slide].disabled{
+    cursor: default;
+    color: #aaa;
+}
+
+/* Fait disparaitre les slides a part celle qui est active */
+.vertical-carousel > .items > .item:not(.active){
+    display: none;
+}
+
+/*** SECTIONS MULTIPLES ***/
+
+/* Masque l'element pour l'afficher par la suite en javascript */
+.scroll
+{
+    opacity:0;
+}
+
+/* Decoupe les elements en ajoutant une nouvelle couleur de fond */
+.scroll:nth-child(even) .row{
+    background-color: #eeeeee;
+}
+
+/*** BARRE DE PROGRESSION ***/
+
+/* Hauteur de la progress bar */
+.progress, .progress .progress-bar{
+    height: 15px;
+}
+
+/* Retire l'arrondissement */
+.progress{
+    border-radius: 0;
+}
+
+/* Transition de la progress bar */
+.progress .progress-bar{
+    text-align: right;
+    transition-duration: 3s;
+}
+
+/* Bulle de la progress bar */
+.progress .bar-width{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -28px;
+    border-radius: 3px;
+    margin-left: -35px;
+}
+
+/* Fleche pour la bulle de la progress bar */
+.progress .bar-width:before{
+    content: "";
+    position: absolute;
+    border-width: 10px 5px;
+    border-style: solid;
+    margin-top: 18px;
+    right: 5px;
+}
+
+/* Couleur de la progress bar et de la bulle */
+.row .progress:nth-of-type(5n+1) .progress-bar, .row .progress:nth-of-type(5n+1) .bar-width{
+    background: #5472AE;
+}
+.row .progress:nth-of-type(5n+2) .progress-bar, .row .progress:nth-of-type(5n+2) .bar-width{
+    background: #4CA66B;
+}
+.row .progress:nth-of-type(5n+3) .progress-bar, .row .progress:nth-of-type(5n+3) .bar-width{
+    background: #F0C300;
+}
+.row .progress:nth-of-type(5n+4) .progress-bar, .row .progress:nth-of-type(5n+4) .bar-width{
+    background: #DB1702;
+}
+.row .progress:nth-of-type(5n+5) .progress-bar, .row .progress:nth-of-type(5n+5) .bar-width{
+    background: #F4661B;
+}
+
+/* Couleur de la fleche pour la bulle de la progress bar */
+.row .progress:nth-of-type(5n+1) .bar-width:before{
+    border-color: #5472AE transparent transparent transparent;
+}
+.row .progress:nth-of-type(5n+2) .bar-width:before{
+    border-color: #4CA66B transparent transparent transparent;
+}
+.row .progress:nth-of-type(5n+3) .bar-width:before{
+    border-color: #F0C300 transparent transparent transparent;
+}
+.row .progress:nth-of-type(5n+4) .bar-width:before{
+    border-color: #DB1702 transparent transparent transparent;
+}
+.row .progress:nth-of-type(5n+5) .bar-width:before{
+    border-color: #F4661B transparent transparent transparent;
+}
+
+/*** LIGNE DE CHRONOLOGIE ***/
+
+/* Positionne la timeline */
+.timeline{
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+/* Ligne horizontale de la timeline */
+.timeline:before{
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 4px;
+    background-color: #ffffff;
+    left: 40px;
+    margin-left: -2px;
+}
+
+/* Defini chaque element de la timeline et empeche le depassement des flottants tout en les affichants en entier */
+.timeline>li{
+    min-height: 120px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+/* Retire la marge pour le dernier element */
+.timeline>li:last-child{
+    margin-bottom: 0px;
+}
+
+/* Positionne les articles */
+.timeline>li article{
+    padding-left: 100px;
+}
+
+/* Conteneur des images */
+.timeline>li aside{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 100%;
+    border: 4px solid #ffffff;
+    background-color: #eeeeee;
+}
+
+/* Force une image ronde */
+.timeline>li img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width:768px){
+    /* Centre la ligne horizontale */
+    .timeline:before{
+        left: 50%;
+    }
+    /* Demande à l'article de ne prendre que la moitie de la page */
+    .timeline>li article{
+        width: 50%;
+        padding-left: 0px;
+    }
+    /* Tous les articles impairs sont places a gauche */
+    .timeline>li:nth-child(odd) article{
+        text-align: right;
+        padding-right: 80px;
+    }
+    /* Tous les articles pairs sont places a droite */
+    .timeline>li:nth-child(even) article{
+        float: right;
+        text-align: left;
+        padding-left: 80px;
+    }
+    /* Centre les images et les agrandies */
+    .timeline>li aside{
+        width: 120px;
+        height: 120px;
+        left: 50%;
+        margin-left: -60px;
+    }
+}
+
+/* Cache le texte pour le faire apparaitre par la suite grace au javascript */
+.letter-by-letter{
+    visibility: hidden;
+}
+
+/* Couleur de l'arriere plan de la page a propos */
+.light-background{
+    background-color: #eee;
+}
+
+/*** CONTACT ***/
+
+/* Disposition des icones */
+.icone{
+    display: inline-block;
+    margin-right: 10px;
+    height: 110px;
+}
+
+/* Taille de l'icone */
+.logo img{
+    width: 50px;
+}
+
+/* Ombre de l'icone et appel à l'animation */
+.shadow{
+    height: 15px;
+    width: 50px;
+    background-color: black;
+    position: relative;
+    top: 40px;
+    opacity: 0.2;
+    border-radius: 50%;
+    animation: shadowAnimation ease 2s infinite;
+    -webkit-animation: shadowAnimation ease 2s infinite;
+}
+
+/* Animation des ombres */
+@keyframes shadowAnimation{
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+@-webkit-keyframes shadowAnimation{
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* Appel à l'animation des icones */
+.logo{
+    position: relative;
+    animation: logoAnimation ease 2s infinite;
+    -webkit-animation: logoAnimation ease 2s infinite;
+}
+
+/* Animation des icones */
+@keyframes logoAnimation{
+    0% {top: 0px;}
+    50% {top: 40px;}
+    100% {top: 0px;}
+}
+@-webkit-keyframes logoAnimation{
+    0% {top: 0px;}
+    50% {top: 40px;}
+    100% {top: 0px;}
+}
+
+/*** COMPETENCES ***/
+
+/* Marge des cartes */
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+	cursor: pointer;
+}
+
+/* Suppression des marges du h2 */
+.card .panel-heading .h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Caché par defaut */
+.card .panel-hide {
+    display: none;
+}
+
+/* Hauteur et centrage de l'image */
+.card .panel-body img {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+}
+
+/* Description de la carte */
+.card .panel-body p {
+    font-weight: bold;
+}
+
+/*** REALISATIONS ***/
+
+/* Titre des realisations */
+.realisation h1{
+    margin-top: 10px;
+    color: #bbb;
+    font-family: 'Comic', sans-serif;
+}
+
+/* Menu vertical */
+.nav-sidebar {
+    padding: 10px 0;
+    margin-left: -15px;
+    overflow: auto;
+    position: fixed;
+    width: 15%;
+    height: calc(100vh - 50px); /* Taille de l'ecran moins les 50px du menu */
+    border-right: 1px solid #eeeeee;
+}
+
+/* Couleur des liens du menu vertical */
+.nav-sidebar a {
+    color: #555;
+}
+
+/* Supprime le background inutile pour le focus d'un lien du menu vertical' */
+.nav-sidebar > li > a:focus {
+    background-color: transparent;
+}
+
+/* Survol d'un lien du menu vertical */
+.nav-sidebar > li > a:hover {
+    background-color: #eee;
+}
+
+/* Lien actif du menu vertical */
+.nav-sidebar > li.active > a { 
+    background-color: #6495ED; 
+    color: #fff; 
+}
+
+/* Espacement entre le titre de l'aticle et son contenu */
+.media-heading{
+    margin-bottom: 10px;
+}
+
+/* Afichage correct pour la classe .well pour la galerie */
+#galerie.well{
+    display: inline-block;
+    width: 100%;
+}
+
+/* Postionnement du titre pour la galerie en prenant en compte le bouton à sa droite */
+.gallery-title{
+    text-align: center;
+    margin-top: -10px;
+    padding-left: 40px;
+}
+
+/* Titre de la galerie */
+.gallery-title h2{
+    display: inline-block;
+    color: #000000;
+}
+
+/* Positionnement du bouton permettant de changer le mode d'affichage de la vitrine */
+.gallery-title .btn-group{
+    float: right;
+    right: -7px;
+}
+
+@media (max-width: 767px){
+    /* Disparition du menu vertical si l'ecran est petit */
+    .nav-sidebar {
+        display: none;
+    }
+    /* Reajustement du titre de la galerie suite a la dispartion du bouton à sa droite */
+    .gallery-title{
+        padding-left: 0px;
+    }
+    /* Disparition du bouton de la galerie si l'ecran est petit */
+    .gallery-title .btn-group {
+        display: none;
+    }
+}
+
+/* Positionnement et perspective de la galerie */
+.gallery-perspective{
+    margin: 0 auto;
+    width: 165px;
+    height: 110px;
+    padding-top: 80px;
+    margin-top: -70px;
+    margin-bottom: 140px;
+    position: relative;
+    perspective: 2000px;
+    perspective-origin: 50% 0%;
+}
+
+/* Appel à l'animation de la galerie et ajout de la 3D */
+.carousel-gallery{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    animation: rotation 20s infinite linear;
+    -webkit-animation: rotation 20s infinite linear;
+}
+
+/* Animation de la galerie */
+@keyframes rotation{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+@-webkit-keyframes rotation{
+    from{
+        -webkit-transform: rotateY(0deg);
+    }
+    to{
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+/* Configuration des images en mode "vitrine" */
+.carousel-gallery img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: solid 5px black;
+    -webkit-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: all .5s ease;
+}
+
+/* Positionnement de chacune des images pour le mode "vitrine" */
+.carousel-gallery a:nth-child(1) img {transform: rotateY(0deg) translateZ(280px);-webkit-transform: rotateY(0deg) translateZ(280px);}
+.carousel-gallery a:nth-child(2) img {transform: rotateY(36deg) translateZ(280px);-webkit-transform: rotateY(36deg) translateZ(280px)}
+.carousel-gallery a:nth-child(3) img {transform: rotateY(72deg) translateZ(280px);-webkit-transform: rotateY(72deg) translateZ(280px)}
+.carousel-gallery a:nth-child(4) img {transform: rotateY(108deg) translateZ(280px);-webkit-transform: rotateY(108deg) translateZ(280px)}
+.carousel-gallery a:nth-child(5) img {transform: rotateY(144deg) translateZ(280px);-webkit-transform: rotateY(144deg) translateZ(280px)}
+.carousel-gallery a:nth-child(6) img {transform: rotateY(180deg) translateZ(280px);-webkit-transform: rotateY(180deg) translateZ(280px)}
+.carousel-gallery a:nth-child(7) img {transform: rotateY(216deg) translateZ(280px);-webkit-transform: rotateY(216deg) translateZ(280px)}
+.carousel-gallery a:nth-child(8) img {transform: rotateY(252deg) translateZ(280px);-webkit-transform: rotateY(252deg) translateZ(280px)}
+.carousel-gallery a:nth-child(9) img {transform: rotateY(288deg) translateZ(280px);-webkit-transform: rotateY(288deg) translateZ(280px)}
+.carousel-gallery a:nth-child(10) img {transform: rotateY(324deg) translateZ(280px);-webkit-transform: rotateY(324deg) translateZ(280px)}
+
+/* Effet lors du survol d'une image lors du mode "vitrine" */
+.carousel-gallery img:hover{
+    -webkit-filter: grayscale(0);
+}
+
+/* Configurations des liens pour le mode "standard" */
+.gallery a{
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* Configuration des images pour le mode "standard" */
+.gallery img{
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.5);
+    width: 165px;
+    height: 110px;
+}
+
+@media (min-width: 1200px){
+    /* Redefinition de la classe .col-lg-2 pour la galerie afin d'afficher 5 images */
+    .gallery .col-lg-2{
+        width: 20%;
+    }
+}
+
+@media (max-width: 479px){
+    /* Ajout d'une nouvelle classe pour gerer un format d'ecran tres petit */
+    .col-tn-12{
+        width: 100%;
+    }
+}
+
+/* Centrage des images de la galerie en mode "standard" */
+.gallery .col-tn-12{
+    text-align: center;
+}
+
+/* Effet lors d'un survol sur une image pour le mode "standard" */
+.gallery .col-tn-12 img:hover{
+    transform:scale(1.10);
+    -webkit-transform: scale(1.10);
+}
+
+.img-responsive { 
+    width: 100%; /* Evite les images avec leur taille réel. Ce bug est visible sur plusieurs browser autre qu'un webkit' */
+}
+
+/*** CV ***/
+
+/* Fond se trouvant derriere la page */
+.dark-background{
+    background-color: #aaa;
+}
+
+/* Page du CV */
+.cv{
+    position: relative;
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+@media (min-width: 768px){
+    /* Disposition du CV sur un grand ecran */
+    .cv{
+        padding: 30px;
+        display: flex;
+    }
+}
+
+/* Bandeau vertical */
+.bandeau{
+    background-color: #6495ED;
+    color: #ffffff;
+}
+
+/* Espacement pour les images du bandeau */
+.bandeau .photo {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+/* Taille maxi de la photo */
+.bandeau .photo img{
+    max-width: 300px;
+}
+
+/* taille maxi du QR Code */
+.bandeau .qrcode img{
+    max-width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Centrage des images du bandeau */
+.bandeau img{
+    margin: 0 auto;
+}
+
+/* Cadre à propos */
+.bandeau .cadre {
+    border: 1px solid #FFFFFF;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Configuration des icones du bandeau */
+.bandeau .glyphicon{
+    float: left;
+    font-size: 20px;
+}
+
+/* Marge du texte lié à l'icone' */
+.content-glyphicon{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+/* Mini rubrique du bandeau */
+.rubrique-glyphicon{
+    font-size: 18px;
+    position: relative;
+    top: -1px;
+}
+
+/* Titre principal du CV */
+.cv h1{
+    margin-top: 0px;
+    font-size: 40px;
+    color: #6495ED;
+    font-family: 'Verdana', sans-serif; 
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+/* Titre secondaire du CV */
+.cv h2{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Titre de chaque rubrique */
+.cv h3{
+    display: inline;
+    font-size: inherit;
+    color: #ffffff;
+    position: relative;
+    top: -3px;
+}
+
+/* Titre des elements du CV */
+.cv h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Ruban des differentes rubriques */
+.ruban{
+    margin-top: 10px;
+    height: 0px;
+    margin-bottom: 15px;
+    border-top: 15px solid #6495ED;
+    border-bottom: 15px solid #6495ED;
+    border-left: 10px solid #6495ED;
+    border-right: 20px solid transparent;
+}
+
+/* Rubriques du CV */
+.rubrique{
+    position: relative;
+    top: -21px;
+    font-size: 24px;
+}
+
+/* Icones des rubriques */
+.rubrique .glyphicon{
+    color: #6495ED;
+    border: #6495ED solid 2px;
+    border-radius: 50px;
+    padding: 6px;
+    background-color: #ffffff;
+    margin-right: 5px;
+}
+
+@media (max-width: 767px){
+    /* Reajustement du titre des rubriques pour un petit ecran */
+    .cv h3{
+        top: -2px;
+    }
+    /* Reajustement des rubriques du CV */
+    .rubrique{
+        top: -18px;
+        font-size: 18px;
+    }
+}
+
+/* Positionnement du conteneur de l'image PDF */
+.flottant{
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    max-width: 1000px;
+}
+
+/* Image PDF */
+.flottant img{
+    width: 32px;
+}
+
+/*** PAGES PROJETS ***/
+
+/* Cadre projet */
+.readme {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 20px 20px 10px 20px;
+	background-color: white;
+}
+
+/* marge des sous-elements */
+.code, .callout {
+	margin-bottom: 10px;
+}
+
+/* Cadre contenant du code */
+.code code {
+	display: block;
+	color: black;
+	border-radius: 0px 0px 3px 3px;
+}
+
+/* Titre des cadres de code */
+.code .h5 {
+	padding: 5px 10px;
+	background: #9baecf;
+	color: white;
+	border-radius: 3px 3px 0px 0px;
+	margin: 0;
+}
+
+/* Lien des cadres de code */
+.code a {
+	float:right;
+}
+
+/* Cadre de presentation / resultat du projet */
+.callout {
+	padding: 0 10px 10px 10px;
+	border: 1px solid #eee;
+	border-top: 5px solid #9baecf;
+	border-radius: 3px;
+}
+
+/* Titre des cadres de presentation / resultat */
+.callout .h4 {
+	color: #337ab7;
+}
+
+/*** PAGE D'ERREUR ***/
+
+/* Messages d'erreur */
+.contact .form-group p{
+    height: 10px;
+    color: red;
+}
+
+/* Message d'erreur principal */
+.error{
+    font-size: 40px;
+    color: #aa0000;
+}
+
+/* Message d'erreur secondaire */
+.error-information{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 420px){
+    /* Message d'erreur en dessous du principal */
+    .error-information{
+        display: block;
+    }
+}

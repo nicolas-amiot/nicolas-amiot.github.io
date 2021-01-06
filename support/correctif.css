@@ -1,0 +1,25 @@
+/*** HACK CSS IE >= 10 ***/
+
+/* barre de progression classique */
+_:-ms-input-placeholder, :root .progress .bar-width{
+    position: relative !important;
+    top: -2px;
+}
+
+/* Annuler la perspective en desactivant le bouton */
+_:-ms-input-placeholder, :root .gallery-title .btn-group{
+    display: none;
+}
+
+/* Retire le padding suite a la disparition du bouton */
+_:-ms-input-placeholder, :root .gallery-title{
+    padding-left: 0px !important;
+}
+
+/* CORRECTIF JAVASCRIPT */
+
+/* barre de progression pour mobile android */
+.bar-width-mobile {
+    position: relative !important;
+    top: -2px;
+}
