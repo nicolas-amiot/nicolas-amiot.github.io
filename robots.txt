@@ -5,3 +5,5 @@ Disallow: /images/
 Disallow: /fonts/
 Disallow: /index.html
 Disallow: /404.html
+
+Disallow: /SyrupSlime/images/
