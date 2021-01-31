@@ -1,6 +1,3 @@
-/* Variable globale */
-var gallery_mode = getCookie("gallery_mode");
-
 $(document).ready(function () {
 	
 	$("header").load("/includes/header.html");
@@ -191,11 +188,9 @@ $(document).ready(function () {
 
     /* Change le cookie pour la galerie selon le choix de l'utilisateur */
     $('#galerie .dropdown-menu a').click(function () {
-        var value = $(this).attr('id') === "galerie_vitrine" ? "vitrine" : "standard";
-        setCookie("gallery_mode", value, 365);
+        var gallery_mode = $(this).attr('id') === "galerie_vitrine" ? "vitrine" : "standard";
         $(this).parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
-        gallery_mode = value;
-        gallery();
+        gallery(gallery_mode);
         return false;
     });
 
@@ -218,29 +213,6 @@ $(document).ready(function () {
 		$("#code").html(content);
 	});
 });
-
-/* Ajoute un cookie à l'utilisateur */
-function setCookie(name, value, days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = name + "=" + value + "; expires=" + date.toUTCString() + "; path=/";
-}
-
-/* Recupere le cookie voulu */
-function getCookie(name) {
-    name += "=";
-    var cookies = document.cookie.split(';');
-    for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1);
-        }
-        if (cookie.indexOf(name) === 0) {
-            return cookie.substring(name.length, cookie.length);
-        }
-    }
-    return "";
-}
 
 /* Active le menu */
 function activateMenuItem(name, value, days) {
@@ -353,7 +325,7 @@ function menuScroll() {
 }
 
 /* Fonction permettant d'affiche la galerie differement selon la taille de l'ecran et le cookie enregistre */
-function gallery() {
+function gallery(gallery_mode) {
     if ($('#galerie .btn-group').css('display') !== 'none' && gallery_mode !== "standard") {
         $('#galerie_vitrine').parent().addClass('disabled');
         $('#galerie_standard').parent().removeClass('disabled');
